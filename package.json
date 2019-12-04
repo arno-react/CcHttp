@@ -1,0 +1,17 @@
+{
+  "name": "cchttp",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "koa": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.4.0"
+  },
+  "description": "A Node SDK for coco微信机器人 HTTP API plugin.",
+  "license": "MIT",
+  "main": "src/main.js",
+  "author": "arno"
+}
