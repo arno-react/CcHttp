@@ -1,8 +1,8 @@
-# CocoHttp Node SDK
+# CocoWXHttp Node SDK
 
-[![License](https://img.shields.io/npm/l/cchttp.svg)](LICENSE)
-[![NPM](https://img.shields.io/npm/v/cchttp.svg)](https://www.npmjs.com/package/cchttp)
-[![NPM Downloads](https://img.shields.io/npm/dt/cchttp.svg)](https://www.npmjs.com/package/cchttp)
+[![License](https://img.shields.io/npm/l/ccwxhttp.svg)](LICENSE)
+[![NPM](https://img.shields.io/npm/v/ccwxhttp.svg)](https://www.npmjs.com/package/ccwxhttp)
+[![NPM Downloads](https://img.shields.io/npm/dt/ccwxhttp.svg)](https://www.npmjs.com/package/ccwxhttp)
 
 本项目为Coco机器人 的 安卓微信机器人web插件 HTTP API 插件的 Node SDK，封装了 web server 相关的代码，让使用 Node.js 的开发者能方便地开发插件。
 
@@ -10,16 +10,16 @@
 
 ## 用法
 
-首先安装 `ccHttp` 模块：
+首先安装 `ccwxhttp` 模块：
 
 ```bash
-npm install --save cchttp
+npm install --save ccwxhttp
 ```
 
 然后在程序中使用：
 
 ```es6
-const CcHttp = require('cchttp');
+const CcHttp = require('ccwxhttp');
 
 const bot = new CcHttp({
     apiRoot: 'http://127.0.0.1:5700/',
@@ -38,7 +38,7 @@ bot.listen(8080, '127.0.0.1');
 
 ### 创建实例
 
-首先创建 `CQHttp` 类的实例，传入 `apiRoot`，即为Coco机器人 HTTP API 插件的监听地址，如果你不需要调用 API，也可以不传入。Access token 和签名密钥也在这里传入，如果没有配置 `access_token` 或 `secret` 项，则不传。
+首先创建 `ccwxhttp` 类的实例，传入 `apiRoot`，即为Coco机器人 HTTP API 插件的监听地址，如果你不需要调用 API，也可以不传入。Access token 和签名密钥也在这里传入，如果没有配置 `access_token` 或 `secret` 项，则不传。
 
 ### 事件处理
 
@@ -50,7 +50,7 @@ bot.listen(8080, '127.0.0.1');
 
 ### API 调用
 
-在设置了 `api_root` 的情况下，直接在 `cchttp` 类的实例上就可以调用 API，第一个参数为要调用的接口（或者称为 action），第二个可选参数为一个对象用于传入参数，例如 `bot('SendMessage', ['123456','hello'])`，这里的 `SendMessage` 即为 发送私聊消息的方法名。  `['123456','hello']` 为要发送的参数 数组类型 以API 描述的参数按顺序写入 。
+在设置了 `api_root` 的情况下，直接在 `ccwxhttp` 类的实例上就可以调用 API，第一个参数为要调用的接口（或者称为 action），第二个可选参数为一个对象用于传入参数，例如 `bot('SendMessage', ['123456','hello'])`，这里的 `SendMessage` 即为 发送私聊消息的方法名。  `['123456','hello']` 为要发送的参数 数组类型 以API 描述的参数按顺序写入 。
 
 还对大部分方法做了简单处理，还可以这样写 
 `bot.SendMessage('123456', 'hello')`
