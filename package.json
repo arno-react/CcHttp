@@ -9,7 +9,7 @@
     "url": "git+https://github.com/arno-react/CcHttp.git"
   },
   "dependencies": {
-    "axios": "^0.16.2",
+    "axios": "^0.18.1",
     "koa": "^2.3.0",
     "koa-bodyparser": "^4.2.0",
     "koa-router": "^7.4.0"
